@@ -114,7 +114,35 @@ const org = {
     }
  }
 
+function create_results_box() {
+    // create new element
+    eh_div = document.createElement('div');
 
+    // give class to element
+    eh_div.id = "ehw-content";
+
+    // define content to display
+    var placeholder_cont = "This is a PLACEHOLDER";
+
+    // create a text node
+    var text_node = document.createTextNode("hello");
+
+    // add text node to div
+    eh_div.appendChild(text_node);
+
+    // eh_div.innerHtml = "Hello!";
+
+    // add div to body
+    document.body.prepend(eh_div);
+
+}
+create_results_box();
+
+function append_results(res) {
+
+}
+
+/*
 function process_data(data){
 
     // create new element
@@ -149,7 +177,7 @@ function process_data(data){
 
 }
 process_data(org);
-
+*/
 
 
 
