@@ -88,6 +88,32 @@ const autos = {
     ],
 }
 
+const org = {
+    vars: {},
+    websites: {
+       erichepperle: {
+          site_abbrev: "EHW",
+          site_name: "erichepperle.com",
+          site_pupose: "Eric's personal website",
+          get_full_name: function () { return "https://" + this.site_name},
+       },
+       erichepperledesigns: {
+          site_abbrev: "EHDS",
+          site_name: "erichepperledesigns.com",
+          site_purpose: "Eric's business website for freelance design & software projects",
+          site_descr: null,
+          get_full_name: function () { return "https://" + this.site_name},
+       },
+       organicharvestm: {
+          site_abbrev: "OHM",
+          site_name: "organicharvestm.org",
+          site_pupose: "Eric's personal Christian ministry websites",
+          site_descr: "",
+          get_full_name: function () { return "https://" + this.site_name},         
+       },
+    }
+ }
+
 data = autos;
 
 
@@ -98,7 +124,8 @@ eh_div = document.createElement('div');
 eh_div.id = "ehw-content";
 
 // define content to display
-var content =`${JSON.stringify(data)}`;
+var content =`${JSON.stringify(org)}`;
+content += `<br><br>${org}`;
 
 // create a text node
 var text_node = document.createTextNode("hello");
@@ -146,6 +173,4 @@ function formatJSONAutos_01(obj) {
 
 
 formatJSONAutos_01(data);
-
-
 
