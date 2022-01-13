@@ -138,14 +138,26 @@ function create_results_box() {
 create_results_box();
 
 function update_results(res) {
+    
+    if (res !== '' && res !== undefined) {
+        res = res;
+    } else {
+        res = "You must pass a 'res' value to the update_results() function";
+    }
+
     // define our content element handle
     const cont_el = document.querySelector('#ehw-content');
 
     // change content text
     cont_el.innerHTML = "<h4>Stringified JSON data</h4>";
-    cont_el.innerHTML += res;
+    cont_el.innerHTML += res;    
 }
 update_results("Hello DOLLY!");
+update_results("")
+update_results("***")
+//alert('press enter to change the message');
+//update_results('Apples are AWESOME')
+
 
 /*
 function process_data(data){
