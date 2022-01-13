@@ -114,38 +114,46 @@ const org = {
     }
  }
 
-data = autos;
+
+function process_data(data){
+    
+    // create new element
+    eh_div = document.createElement('div');
+
+    // give class to element
+    eh_div.id = "ehw-content";
+
+    // define content to display
+    var content =`${JSON.stringify(org)}`;
+    content += `<br><br>${org}`;
+
+    // create a text node
+    var text_node = document.createTextNode("hello");
+
+    // add text node to div
+    eh_div.appendChild(text_node);
+
+    // eh_div.innerHtml = "Hello!";
+
+    // add div to body
+    document.body.prepend(eh_div);
+
+    // ----- Change Div Contents ---
+
+    // define our content element handle
+    const cont_el = document.querySelector('#ehw-content');
+
+    // change content text
+    cont_el.innerHTML = "<h4>Stringified JSON data</h4>";
+    cont_el.innerHTML += content;
+
+}
+process_data();
 
 
-// create new element
-eh_div = document.createElement('div');
 
-// give class to element
-eh_div.id = "ehw-content";
 
-// define content to display
-var content =`${JSON.stringify(org)}`;
-content += `<br><br>${org}`;
 
-// create a text node
-var text_node = document.createTextNode("hello");
-
-// add text node to div
-eh_div.appendChild(text_node);
-
-// eh_div.innerHtml = "Hello!";
-
-// add div to body
-document.body.prepend(eh_div);
-
-// ----- Change Div Contents ---
-
-// define our content element handle
-const cont_el = document.querySelector('#ehw-content');
-
-// change content text
-cont_el.innerHTML = "<h4>Stringified JSON data</h4>";
-cont_el.innerHTML += content;
 
 // loop through and print out json data
 /*
@@ -159,6 +167,7 @@ function appendData(data) {
 }
 */
 
+
 // not working with foreach yet ...
 function formatJSONAutos_01(obj) {
     
@@ -170,7 +179,5 @@ function formatJSONAutos_01(obj) {
         console.log(obj[i]);
     }
 }
-
-
 formatJSONAutos_01(data);
 
