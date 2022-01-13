@@ -134,13 +134,18 @@ function create_results_box() {
 
     // add div to body
     document.body.prepend(eh_div);
-
 }
 create_results_box();
 
-function append_results(res) {
+function update_results(res) {
+    // define our content element handle
+    const cont_el = document.querySelector('#ehw-content');
 
+    // change content text
+    cont_el.innerHTML = "<h4>Stringified JSON data</h4>";
+    cont_el.innerHTML += res;
 }
+update_results("Hello DOLLY!");
 
 /*
 function process_data(data){
