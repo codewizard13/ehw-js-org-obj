@@ -116,7 +116,7 @@ const org = {
 
 
 function process_data(data){
-    
+
     // create new element
     eh_div = document.createElement('div');
 
@@ -124,7 +124,7 @@ function process_data(data){
     eh_div.id = "ehw-content";
 
     // define content to display
-    var content =`${JSON.stringify(org)}`;
+    var content =`${JSON.stringify(data)}`;
     content += `<br><br>${org}`;
 
     // create a text node
@@ -148,7 +148,7 @@ function process_data(data){
     cont_el.innerHTML += content;
 
 }
-process_data();
+process_data(org);
 
 
 
