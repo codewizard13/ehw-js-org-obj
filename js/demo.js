@@ -122,10 +122,10 @@ function create_results_box() {
     eh_div.id = "ehw-content";
 
     // define content to display
-    var placeholder_cont = "This is a PLACEHOLDER";
+    var placeholder_cont = "This is PLACEHOLDER TEXT";
 
     // create a text node
-    var text_node = document.createTextNode("hello");
+    var text_node = document.createTextNode(placeholder_cont);
 
     // add text node to div
     eh_div.appendChild(text_node);
