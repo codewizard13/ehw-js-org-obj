@@ -34,3 +34,8 @@ const org = {
        },
     }
  }
+
+// Define website vars
+var ehw = org.websites.erichepperle;
+var ehds = org.websites.erichepperledesigns;
+var ohm = org.websites.organicharvestm;
